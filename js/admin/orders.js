@@ -753,6 +753,9 @@ function init()
 					}
 					else
 						jAlert(data.error);
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					jAlert('TECHNICAL ERROR:\n\nDetails:\n\nText status: ' + textStatus + '\n\nError thrown: ' + errorThrown + '\n\nResponse text:\n' + jqXHR.responseText);
 				}
 			});
 		}
@@ -819,6 +822,9 @@ function init()
 				}
 				else
 					jAlert(data.error);
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				jAlert('TECHNICAL ERROR:\n\nDetails:\n\nText status: ' + textStatus + '\n\nError thrown: ' + errorThrown + '\n\nResponse text:\n' + jqXHR.responseText);
 			}
 		});
 		e.preventDefault();
